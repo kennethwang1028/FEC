@@ -20,4 +20,3 @@ app.get('/get', (req, res)=>{
   })
 });
 
-

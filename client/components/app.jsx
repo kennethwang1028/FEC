@@ -17,11 +17,11 @@ class App extends React.Component{
     this.fetchGET = this.fetchGET.bind(this);
     this.getStyles = this.getStyles.bind(this);
 
-  }
+  };
 
   componentDidMount(){
     this.fetchEverything();
-  }
+  };
 
   fetchGET(string, id){
     axios.get('/get', {
@@ -60,18 +60,18 @@ class App extends React.Component{
     //await this.fetchGET('relatedItems');
     //await this.fetchGET('QA');
     //await this.fetchGET('reviews');
-  }
+  };
 
   componentDidMount(){
     this.fetchEverything();
-  }
-
+  };
 
   render(){
     return (
       <div>
-        <Reviews id ={this.state.targetId}/>
-        <Overview info = {this.state.list} callback = {this.productInfo} styles = {this.state.styles}/>
+         <Overview info = {this.state.list} callback = {this.productInfo} styles = {this.state.styles}/>
+         <Reviews id ={this.state.targetId}/>
+
       </div>
     )
   }
