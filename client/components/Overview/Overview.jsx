@@ -13,7 +13,6 @@ class Overview extends React.Component {
       mounted: false,
       index: 0
     }
-
     this.changePic = this.changePic.bind(this);
   }
 
@@ -36,6 +35,15 @@ class Overview extends React.Component {
       })
       }
 
+    var id = this.props.info.id;
+    console.log(prevProps);
+    if(id !== prevProps.info.id) {
+      console.log(id);
+      this.getStyles(id);
+      // this.setState({
+      //   index: id
+      // })
+    }
   }
 
   fetchGET(string, id, name){
