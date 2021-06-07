@@ -196,10 +196,10 @@ class Reviews extends React.Component{
       if(value === undefined){
         value = ''
       }
-      console.log(value,'photo')
-      obj['photos'].push(String(value));
+      obj.Photo.push({ url: String(value) });
+    } else {
+      obj[key] = value;
     }
-    obj[key] = value;
     this.setState({
       newReview: obj,
     });

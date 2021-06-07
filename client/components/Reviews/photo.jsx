@@ -5,11 +5,12 @@ const Photo = (props) =>{
   if (photo.length !== 0) {
     return (
       <div>
-        {photo.map( i =>{
+        {photo.map(( i, index) =>{
+          console.log(i)
           return (
             <img
               src = { i.url }
-              key = { i.id }
+              key = { index }
               style = { img }>
             </img>
           )
