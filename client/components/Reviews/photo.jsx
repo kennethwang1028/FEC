@@ -6,7 +6,6 @@ const Photo = (props) =>{
     return (
       <div>
         {photo.map(( i, index) =>{
-          console.log(i)
           return (
             <img
               src = { i.url }
